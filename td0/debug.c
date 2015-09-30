@@ -4,30 +4,30 @@
 
 
 //fonction factorielle
-int factorielle(int x){
-  int res;
-  if(x == 0) return 0;
-  while(x > 1){
-    res *= (x-1);
-    x = x-1;
-  }
-  return res;
+int factorielle (int n)
+{
+	int f;
+	if (n <= 1)
+		f = 1;
+	else
+		f = n * factorielle(--n);
+	return f;
 }
 
 //fonction somme
 int somme(int x){
   int res = 0;
-  int i = 0;
-  while(i <= x){
-    i++;       /*incrementation 
-    res += i-1;/* fin de boucle */
+  int i;
+  for (i=1;i<=x;i++)
+  {
+	res +=i;
   }
   return res;
 }
 
 //fonction maximum
 int maximum(int x, int y){
-  if(x = y || y > x)
+  if(y >= x)
     return y;
   else 
     return x;
